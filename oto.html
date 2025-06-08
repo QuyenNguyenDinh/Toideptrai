@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hiệu ứng đổi màu xe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .main-image img {
+      width: 500px;
+      height: auto;
+      border: 2px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .thumbnails {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .thumbnails img {
+      width: 60px;
+      height: auto;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: border 0.2s;
+    }
+
+    .thumbnails img:hover {
+      border: 2px solid red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Các mẫu màu xe VF3</h2>
+
+  <div class="main-image">
+    <img id="largeImage" src="https://banggiavinfast.vn/wp-content/uploads/2024/06/vinfast-vf3-mau-do-crimson-red-1.jpg" alt="Red Car">
+  </div>
+
+  <div class="thumbnails">
+    <img src="https://banggiavinfast.vn/wp-content/uploads/2024/06/vinfast-vf3-mau-do-crimson-red-1.jpg" onmouseover="changeImage(this)" alt="Red">
+    <img src="https://banggiavinfast.vn/wp-content/uploads/2024/06/vinfast-vf3-mau-xanh-luc-nhat-urban-mint-1.jpg" onmouseover="changeImage(this)" alt="Black">
+    <img src="https://banggiavinfast.vn/wp-content/uploads/2024/06/vinfast-vf3-14.jpg" onmouseover="changeImage(this)" alt="Blue">
+    <img src="https://banggiavinfast.vn/wp-content/uploads/2024/06/vinfast-vf3-mau-hong-tim.jpg" onmouseover="changeImage(this)" alt="Grey">
+    <img src="https://banggiavinfast.vn/wp-content/uploads/2024/06/vinfast-vf3-mau-xam-zenith-grey.jpg" onmouseover="changeImage(this)" alt="Silver">
+  </div>
+
+  <script>
+    function changeImage(thumbnail) {
+      const largeImage = document.getElementById('largeImage');
+      largeImage.src = thumbnail.src;
+    }
+  </script>
+
+</body>
+</html>
